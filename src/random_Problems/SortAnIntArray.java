@@ -22,6 +22,13 @@ public class SortAnIntArray {
 		System.out.println("After sort "+ Arrays.toString(intArray2));
 		
 		
+		System.out.println("#################With For Loop in descending order###################################");
+		int[] intArray3 = {34,65,22,45,78,5,4,90,5,4,23,56,78};
+		System.out.println("Before sort "+ Arrays.toString(intArray3));
+		SortintArraywithLoopDescendingOrder(intArray3);
+		System.out.println("After sort "+ Arrays.toString(intArray3));
+		
+		
 	}
 	
 	public static int[] SortintArray(int[] Arr) {
@@ -36,6 +43,21 @@ public class SortAnIntArray {
 		for(int i=0; i<Arr.length;i++) {
 			for(int j=i+1; j<Arr.length;j++) {
 				if(Arr[i]>Arr[j]) {
+					int temp = 0;
+					temp = Arr[i];
+					Arr[i] = Arr[j];
+					Arr[j] = temp;
+				}
+			}
+		}
+		return Arr;
+	}
+	
+	public static int[] SortintArraywithLoopDescendingOrder(int[] Arr) {
+		//With the help of loop
+		for(int i=0; i<Arr.length;i++) {
+			for(int j=i+1; j<Arr.length;j++) {
+				if(Arr[i]<Arr[j]) {
 					int temp = 0;
 					temp = Arr[i];
 					Arr[i] = Arr[j];
