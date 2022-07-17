@@ -37,7 +37,28 @@ public class Alphabet_Pattern {
 			}
 			System.out.println();
 		}
+		System.out.println("#############################################################");
+		
+		/*
+		Draw below pattern:
+			input: abcde
+			Output: ABbCccDdddEeeee
+		*/
+		String str = "abcdef";
+		String expStr = "";
+		
+		for(int i=0;i<str.length();i++) {
+			for(int j=0;j<=i;j++) {
+				
+				if(j==0) {
+					expStr = expStr + String.valueOf(str.charAt(i)).toUpperCase();
+				}else {
+					expStr = expStr + String.valueOf(str.charAt(i));
+				}
+			}
 
+		}
+		System.out.println(expStr);
+		
 	}
-
 }
